@@ -9,7 +9,7 @@ parser.add_argument('textFile', help='text file to analyze')
 args = parser.parse_args()
 
 try:
-    oFile = open(args.textFile)
+    oFile = open(args.textFile, 'r', encoding='utf8')
 except FileNotFoundError:
     raise SystemExit(f'File not found {args.textFile}')
 
